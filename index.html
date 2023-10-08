@@ -26,15 +26,15 @@
                 </ul>
             </div>
             <!--Mobile Screen-->
-            <div id="Book" class="lg:hidden cursor-pointer">
+            <div id="Book" class="lg:hidden cursor-pointer z-50">
                 <i class="fa-solid fa-bars"></i>
             </div>
 
             <div id="menu" class="hidden bg-color-primary-dark h-[100vh] absolute inset-0">
                 <ul class="h-full grid place-items-center py-20">
-                    <li><a href="#home" class="hover:text-color-secondary ease duration-200">Home</a></li>
-                    <li><a href="#features" class="hover:text-color-secondary ease duration-200">Features</a></li>
-                    <li><a href="#contact" class="hover:text-color-secondary ease duration-200">Contact</a></li>
+                    <li><a id="hLink" href="" class="hover:text-color-secondary ease duration-200">Home</a></li>
+                    <li><a id="hLink" href="#features" class="hover:text-color-secondary ease duration-200">Features</a></li>
+                    <li><a id="hLink" href="#contact" class="hover:text-color-secondary ease duration-200">Contact</a></li>
 
                     <li><button class="btn">Sign up</button></li>
                     <li><button class="bg-color-blob px-9 py-3 rounded-md capitalize font-bold hover:opacity-80 ease-in duration-200">Log in</button></li>
@@ -101,8 +101,24 @@
     </main>
 
     <script>
+        //Mobile menu
+        const Book = document.querySelector('#Book');
+        const menu = document.querySelector('#menu');
+        const hLink = document.querySelector('#hLink');
+        const faSolid = document.querySelector(".fa-solid");
 
-    </script>
+        Book.addEventListener("click" , () => {
+            menu.classList.toggle('hidden');
+            faSolid.classList.toggle('fa-xmark')
+        })
+
+        hLink.forEach(link => {
+            link.addEventListener("click", () => {
+                menu.classList.toggle('hidden');
+                faSolid.classList.toggle('fa-xmark')
+            })
+        })
+     </script>
 
 </body>
 </html>
