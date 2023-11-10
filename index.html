@@ -17,9 +17,9 @@
             </div>
             <div>
                 <ul class="hidden lg:flex items-center space-x-12">
-                    <li><a href="#home" class="hover:text-color-secondary ease duration-200">Home</a></li>
-                    <li><a href="#features" class="hover:text-color-secondary ease duration-200">Features</a></li>
-                    <li><a href="#contact" class="hover:text-color-secondary ease duration-200">Contact</a></li>
+                    <li><a href="#home" class="hover:text-color-secondary ease-in duration-200">Home</a></li>
+                    <li><a href="#features" class="hover:text-color-secondary ease-in duration-200">Features</a></li>
+                    <li><a href="#contact" class="hover:text-color-secondary ease-in duration-200">Contact</a></li>
 
                     <li><button class="btn">Sign up</button></li>
                     <li><button class="bg-color-blob px-9 py-3 rounded-md capitalize font-bold hover:opacity-80 ease-in duration-200">Log in</button></li>
@@ -32,9 +32,9 @@
 
             <div id="menu" class="hidden bg-color-primary-dark h-[100vh] absolute inset-0">
                 <ul class="h-full grid place-items-center py-20">
-                    <li><a id="hLink" href="" class="hover:text-color-secondary ease duration-200">Home</a></li>
-                    <li><a id="hLink" href="#features" class="hover:text-color-secondary ease duration-200">Features</a></li>
-                    <li><a id="hLink" href="#contact" class="hover:text-color-secondary ease duration-200">Contact</a></li>
+                    <li><a id="hLink" href="#home" class="hover:text-color-secondary ease-in duration-200">Home</a></li>
+                    <li><a id="hLink" href="#features" class="hover:text-color-secondary ease-in duration-200">Features</a></li>
+                    <li><a id="hLink" href="#contact" class="hover:text-color-secondary ease-in duration-200">Contact</a></li>
 
                     <li><button class="btn">Sign up</button></li>
                     <li><button class="bg-color-blob px-9 py-3 rounded-md capitalize font-bold hover:opacity-80 ease-in duration-200">Log in</button></li>
@@ -113,9 +113,9 @@
         })
 
         hLink.forEach(link => {
-            link.addEventListener("click", () => {
-                menu.classList.toggle('hidden');
-                faSolid.classList.toggle('fa-xmark')
+        link.addEventListener("click", () => {
+            menu.classList.toggle('hidden');
+            faSolid.classList.toggle('fa-xmark')
             })
         })
      </script>
